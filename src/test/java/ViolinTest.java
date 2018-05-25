@@ -12,7 +12,7 @@ public class ViolinTest {
 
     @Before
     public void before(){
-        violin = new Violin(InstrumentType.STRING, MaterialType.WOOD, "red", 150.00, 100);
+        violin = new Violin(InstrumentType.STRING, MaterialType.WOOD, "red", 150.00, 100, "musiiiic");
     }
 
     @Test

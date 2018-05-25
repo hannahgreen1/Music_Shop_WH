@@ -1,11 +1,11 @@
 package Shop.instruments;
 
-public class Guitar extends  Instruments{
+public class Guitar extends  Instruments implements IPlay{
 
     private int strings;
 
-    public Guitar(InstrumentType type, MaterialType material, String colour, int strings, double price){
-        super(type, material, colour, price);
+    public Guitar(InstrumentType type, MaterialType material, String colour, int strings, double price, String sound){
+        super(type, material, colour, price, sound);
         this.strings = strings;
     }
 
@@ -14,4 +14,8 @@ public class Guitar extends  Instruments{
     }
 
 
+    @Override
+    public String play(String sound) {
+        return sound;
+    }
 }
