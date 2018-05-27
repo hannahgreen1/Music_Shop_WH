@@ -1,7 +1,7 @@
 package Shop.instruments;
 
 
-public abstract class Instruments implements IPlay{
+public abstract class Instruments implements IPlay, ISell{
 
     protected InstrumentType type;
     protected MaterialType material;
@@ -36,5 +36,10 @@ public abstract class Instruments implements IPlay{
 
     public String playSound(String playSound) {
         return this.playSound;
+    }
+
+    @Override
+    public int sell(int sellPrice) {
+        return sellPrice;
     }
 }
