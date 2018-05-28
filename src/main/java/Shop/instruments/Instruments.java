@@ -38,8 +38,5 @@ public abstract class Instruments implements IPlay, ISell{
         return this.playSound;
     }
 
-    @Override
-    public int sell(int sellPrice) {
-        return sellPrice;
-    }
+
 }

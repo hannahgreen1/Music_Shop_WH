@@ -1,30 +1,35 @@
 package Shop;
 
-import Shop.instruments.Instruments;
+
+import Shop.instruments.ISell;
 
 import java.util.ArrayList;
 
 public class Shop {
 
-    private double till;
-    private ArrayList<Instruments> instrument;
-    Instruments instruments;
-    private double sellPrice;
+    private String name;
+    private ArrayList<ISell> stock;
 
-
-    public Shop(double till, double sellPrice){
-        this.till = till;
-        this.sellPrice = sellPrice;
+    public Shop(String name) {
+        this.name = name;
+        this.stock = new ArrayList<>();
     }
 
-
-    public double getTill() {
-        return this.till;
+    public String getName() {
+        return this.name;
     }
 
-    public double addMoneyToTill(){
-       return this.till += sellPrice;
+    public int stockCount() {
+        return this.stock.size();
     }
 
+    public void addToStock(ISell item) {
+        this.stock.add(item);
+    }
 
+    public void removeFromStock(ISell item) {
+        this.stock.remove(item);
+    }
 }
+
+
